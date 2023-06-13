@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="gr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script defer="module" src="index.js"></script>
+    <title>ΘΕΡΜΟΫΔΡΑΥΛΙΚΟΣ-ΠΕΤΟΥΣΗΣ ΓΕΩΡΓΙΟΣ | petousisplumbing.gr</title>
+  </head>
+  <body>
+    <!-----------------------------SCROLL LOADER------------------------------------>
+    <div id="scroll-progress"></div>
+    <!-----------------------------TON NAVIGATION HEADER SECTION------------------------------------>
+    <div class="container--nav  container-fluid nav-animation sticky" >
+      <nav class="navbar navbar-expand-xxl navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bolde"
+            ><h1 class="head--title">ΘΕΡΜΟΫΔΡΑΥΛΙΚΟΣ</h1></a
+          >
+          <a class="navbar-brand text-white fw-bolder"
+            ><img src="images/" alt="">
+          </a>
+          <a class="navbar-brand text-white fw-bolder"
+            ><h3 class="head--name">ΠΕΤΟΥΣΗΣ ΓΕΩΡΓΙΟΣ</h3>
+          </a>
+          <div class="d-flex" style="height: 100px">
+            <div class="vr bg-info"></div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms fs-5 mb-2" id="navbarText" id="#top">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4em;">
+              <li class="nav-item" >
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link active nav--text hover-underline-animation"
+                  aria-current="page"
+                  href="#"
+                  >ΑΡXΙΚΗ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link active nav--text hover-underline-animation"
+                  aria-current="page"
+                  href="#who"
+                  >ΕΠΙΧΕΙΡΗΣΗ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link active nav--text hover-underline-animation"
+                  aria-current="page"
+                  href="#work"
+                  >ΕΡΓΑ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link nav--text hover-underline-animation"
+                  href="#services"
+                  >ΥΠΗΡΕΣΙΕΣ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link nav--text hover-underline-animation"
+                  href="#about"
+                  >ΠΕΡΙΣΣΟΤΕΡΑ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  style="color: rgb(210, 210, 221)"
+                  class="nav-link nav--text hover-underline-animation"
+                  href="#contact"
+                  >ΕΠΙΚΟΙΝΩΝΙΑ</a
+                >
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!------LEFT NAVBAR AFTER 1400PX-->
+   
+    <nav class="navbar navbar-dark fixed-top hidden">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+          
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow pe-3">
+              <li class="nav-item ">
+                <a class="nav-link text-center active hover-underline-animation" aria-current="page" href="#">ΑΡXΙΚΗ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center hover-underline-animation" href="#who">ΕΠΙΧΕΙΡΗΣΗ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center hover-underline-animation" href="#work">ΕΡΓΑ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center hover-underline-animation" href="#services">ΥΠΗΡΕΣΙΕΣ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center hover-underline-animation" href="#about">ΠΕΡΙΣΣΟΤΕΡΑ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center hover-underline-animation" href="#contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+  <!--------------------------------HEADER SECTION------------------------------>
+
+  <article class="header-container slide">
+    <header>
+        <h1 class="typing-effect-h1">ΘΕΡΜΟΫΔΡΑΥΛΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</h1>
+        <h3 class="typing-effect-h3">Πετούσης Γεώργιος</h3>
+        <h4 class="typing-effect-h4">Ολοκληρωμένες Λύσεις Υδρευσης & Θέρμανσης για σπίτια και επιχειρήσεις</h4>
+    </header>
+ </article>
+ <a href="#top"><div class="arrow-down fade-in-from-bottom"></div></a>
+<!--------------------------------WHO WE ARE SECTION----------------------------------->
+<div class="who-container section-container" id="who" >
+  <div class="who-headers">
+    <h5>ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΕΜΑΣ</h5>
+    <h6>&bull; Who We Are &bull;</h6>
+    <hr>
+  </div>
+  <div class="who-wrapper">
+    <div class="who-item">
+      <img src="images/quality-assurance.png" alt="an image of quality-assurance symbol" class="who-img">
+      <p>Η ομάδα μου αποτελείται απο έμπειρους και πιστοποιημένους υδραυλικούς με πολυετή εμπειρία. Παρέχουμε μεγάλη γκάμα υπηρεσιών σε ιδιώτες αλλά και επιχειρήσεις. Απο μία απλή υδραυλική βλάβη έως μια ολόκληρη Θερμοϋδραυλική εγκατάσταση, σας έχουμε καλλυμένους.</p>
+    </div>
+    <div class="who-item">
+      <img src="images/maintenance.png" alt="icon with house and a mechanic wheel" class="who-img">
+      <p>Οι υπηρεσίες οικιακών υδραυλικών εγκαταστάσεων περιλαμβάνουν καθαρισμό αποχέτευσης, εγκατάσταση θερμοσίφωνα, ανακαίνιση μπάνιου, θέρμανση. Κατανοούμε την σημασία ενός σωστά λειτουργικού υδραυλικού συστήματος στο σπίτι σας, γι΄αυτό σας παρέχουμε αξιόπιστες λύσεις.</p>
+    </div>
+    <div class="who-item">
+      <img src="images/improvement.png" alt="an improvement diagram with a mechanic wheel" class="who-img">
+      <p>Για επιχειρήσεις, προσφέρουμε ολοκληρωμένη συντήρηση υδραυλικών εγκαταστάσεων, επισκευές σωλήνων, εγκατάσταση παγίδας λίπους αλλα και προσαρμοσμένες λύσεις. Στόχος μας είναι η ομαλή και σωστή λειτουργία των εγκάταστάσεων σας.</p>
+    </div>
+    <div class="who-item">
+      <img src="images/protection.png" alt="two german keys and a shield of approval" class="who-img">
+      <p>Δίνουμε έμφαση στην ποιότητα κατασκευής και προτεραιότητα στην εξαιρετική εξυπηρέτηση πελατών. Εξοπλισμένοι με τα πιο σύγχρονα εργαλεία και τεχνικές για να χειριζόμαστε οποιοδήποτε υδραυλικό έργο με ακρίβεια και επαγγελματισμό</p>
+    </div >
+    <div class="who-item">
+      <img src="images/customer-service.png" alt="a hand icon holding an avatar"   class="who-img">
+      <p>Εμπιστευτείτε μας για την παροχή αξιόπιστων, αποτελεσματικών και υψηλής ποιότητας Θερμοϋδραυλικών υπηρεσιών που καλύπτουν τις ανάγκες σας. Επικοινωνήστε μαζί μας σήμερα για να προγραμματίσετε ένα ραντεβού ή να ζητήσετε μια προσφορά.</p>
+    </div>
+ </div>
+</div>
+
+    <!-----------------------------WORKS SECTION------------------------------->
+    <div class="section-container" id="work" ></div>
+    <main>
+      <div class="sections fade-in-on-scroll-left" >
+        <article class="sections-text">
+          <h1 class="match-navbar">ΕΡΓΑ</h1>
+          <h4>&bull; OUR WORK &bull;</h4>
+          <hr>
+          <p>
+            Οι εργασίες και έργα που αναλαμβάνουμε εκτελούνται πάντα <br>
+            με συνέπεια και επαγγελματισμό.
+          </p>
+        </article>
+      </div>
+      <div class="triangle-down" ></div>
+
+      
+      <div class="works-container">
+        <div class="container">
+          <img src="images/carousel-icon-1.jpg" alt="Image 1" class="works-img" onclick="toggleImageEnlargement(this)">
+          <img src="images/carousel-icon-2.jpg" alt="Image 2" class="works-img" onclick="toggleImageEnlargement(this)">
+          <img src="images/carousel-icon-3.jpg" alt="Image 3" class="works-img" onclick="toggleImageEnlargement(this)">
+          <img src="images/carousel-icon-4.jpg" alt="Image 4" class="works-img" onclick="toggleImageEnlargement(this)">
+          <img src="images/carousel-icon-5.jpg" alt="Image 3" class="works-img" onclick="toggleImageEnlargement(this)">
+          <img src="images/pyrosvesi.jpg" alt="Image 5"       class="works-img" onclick="toggleImageEnlargement(this)"> 
+          <img src="images/carousel-icon-1.jpg" alt="Image 6" class="works-img" onclick="toggleImageEnlargement(this)">
+      </div>
+      </div>
+      <!-----------------------------------------------------SERVICES SECTION-------------------------------------------------->
+      <div class="section-container" id="services"></div>
+      <div class="sections fade-in-on-scroll-left" >
+        <article class="sections-text">
+          <h1 >ΥΠΗΡΕΣΙΕΣ</h1>
+          <h4>&bull; SERVICES  &bull;</h4>
+          <hr>
+          <p >
+            Σας παρέχουμε υπηρεσίες υψηλής ποιότητας και κατασκευής,<br />
+            με τα καλύτερα υλικά που προσφέρει η αγορά.
+          </p>
+        </article>
+      </div>
+      <div class="triangle-down "></div>
+      <div class="services--container">
+        <div class="service card">
+          <h3>ΘΕΡΜΑΝΣΗ</h3>
+          <img
+            class="img--services"
+            src="images/thermansi.jpg"
+            alt="a radiator image"
+          />
+          <p>
+            Είδη θέρμανσης: θερμαντικά σώματα, λέβητες, καυστήρες, boiler,αντλίες
+            θερμότητας.
+          </p>
+        </div>
+        <div class="service card">
+          <h3>ΥΔΡΕΥΣΗ</h3>
+          <img
+            class="img--services"
+            src="images/vrisi.jpg"
+            alt="an image of a water battery"
+          />
+          <p>
+            Η εσωτερική υδραυλική εγκατάσταση ενός κτηρίου, περιλαμβάνει το
+            σύστημα διανομής του κρύου και ζεστού νερού και το σύστημα αποχέτευσης
+            των ακαθάρτων νερών και λυμάτων.
+          </p>
+        </div>
+        <div class="service card">
+          <h3>ΕΝΔΟΔΑΠΕΔΙΑ ΘΕΡΜΑΝΣΗ</h3>
+          <img
+            class="img--services"
+            src="images/endodapedia.jpg"
+            alt="floor heating"
+          />
+          <p>
+            Η ενδοδαπέδια θέρμανση είναι ένα σύστημα σωλήνων που εγκαθίσταται κάτω
+            από το δάπεδο. Μέσα από αυτό περνά ζεστό νερό. Το σύστημα παρουσιάζει
+            κοινά με τους συμβατικούς τρόπους θέρμανσης.
+          </p>
+        </div>
+        <div class="service card">
+          <h3>ΗΛ.ΘΕΡΜΟΣΙΦΩΝΑΣ</h3>
+          <img class="img--services" src="images/hliakos.jpg" alt="sun heater" />
+          <p>
+            Ο ηλιακός θερμοσίφωνας είναι η απλούστερη και η γνωστότερη ηλιακή
+            συσκευή. Κατά την λειτουργία του γίνεται εκμετάλλευση δυο φυσικών
+            φαινομένων. Με την αρχή του θερμοσιφώνου επιτυγχάνεται η κυκλοφορία
+            του νερού με φυσικό τρόπο χωρίς μηχανικά μέρη (αντλίες κλπ.)
+          </p>
+        </div>
+        <div class="service card">
+          <h3>ΣΥΣΤΗΜΑΤΑ ΠΥΡΟΣΒΕΣΗΣ</h3>
+          <img
+            class="img--services"
+            src="images/pyrosvesi.jpg"
+            alt="fire extinguiser"
+          />
+          <p>
+            Συστήματα πυρόσβεσης - (Πυρανιχνευτές, Κομβίο Ενεργοποίησης &
+            Ακυρωτικό, Φαροσειρήνα κτλ.), με στόχο την όσο το δυνατόν ταχύτερη
+            ανίχνευση και αντιμετώπιση εστίας φωτιάς.
+          </p>
+        </div>
+        <div class="service card">
+          <h3>ΕΝΙΣΧΥΣΗ ΠΙΕΣΗΣ ΝΕΡΟΥ</h3>
+          <img
+            class="img--services"
+            src="images/Water-pressure-booster-pumps.png"
+            alt="water pump"
+          />
+          <p>
+            Για την παροχή νερού οικιακής χρήσης έχει σχεδιαστεί μία αντλία
+            ενίσχυσης πίεσης νερού που αυξάνει την πίεση σε ένα σύστημα νερού ώστε
+            να προσφέρει επαρκή παροχή και πίεση νερού στους χρήστες.
+          </p>
+        </div>
+      </div>
+
+      <!-------------------------------------------ABOUT US SECTION-------------------------------------------------->
+      
+      <div class="section-container" id="about"></div>
+      <div class="sections fade-in-on-scroll-left" >
+        <article class="sections-text">
+          <h1>ΕΞΑΤΟΜΙΚΕΥΜΕΝΕΣ ΛΥΣΕΙΣ</h1>
+          <h4>&bull; CUSTOM SOLUTIONS &bull;</h4>
+          <hr>
+          <p>
+            Με πάνω από 30 χρόνια επαγγελματικής εμπειρίας,<br />
+            το εξειδικευμένο μας συνεργείο καλυπτει οποιαδήποτε εργασία ή έργο σας
+            χρειάζεται υλοποίηση.
+          </p>
+          <hr>
+          <p>
+            Ανάλαμβανουμε κάθε είδους εργασία ύδρευσης και θέρμανσης σε όλη την Ελλάδα,<br />
+            προσαρμοσμένες στις ανάγκες σας, πάντα σε προσιτές τιμές.
+          </p>
+        </article>
+      </div>
+      <div class="triangle-down"></div>
+      <!-----------------------------------------ABOUT IMAGES CONTAINER-------------------------------->
+     
+      <div class="imgs-container">
+        <div class="child">
+          <h6 class="about-h6">ΜΕΛΕΤΕΣ & ΑΝΑΚΑΙΝΙΣΕΙΣ</h6>
+          <img
+            src="images/house-repair.jpg"
+            alt="house with tools"
+            class="about-imgs"
+          
+          />
+          <p class="hide">Αναλαμβάνουμε μελέτες για θερμουδραυλικές εγκαταστάσεις,
+            καθώς και την υλοποίηση τους,
+            όπως επίσης και ανακαινίσεις του δικτύου σας.
+            </p>
+        </div>
+        <div class="child">
+          <h6 class="about-h6">ΓΡΗΓΟΡΗ ΕΞΥΠΗΡΕΤΗΣΗ </h6>
+          <img
+            src="images/plumber-truck.jpg"
+            alt="plumbing van"
+            class="about-imgs"
+            
+          />
+          <p class="hide">Ο χρόνος σας είναι πολύτιμος,
+            για αυτό και εμείς σας εξυπηρετούμε το συντομότερο δυνατό
+            με συνέπεια και επαγγελματισμό.
+            </p>
+        </div>
+        <div class="child">
+          <h6 class="about-h6">SMART ΥΔΡΑΥΛΙΚΕΣ ΛΥΣΕΙΣ</h6>
+          <img
+            src="images/water-tap.jpg"
+            alt="plumbing van"
+            class="about-imgs"
+          />
+          <p class="hide">
+            Σας παρέχουμε έξυπνες λύσεις ύδρευσης και θέρμανσης
+            για να αναβαθμίσετε
+            τον τρόπο ζωής σας και vα εξοικονομήσετε ενέργεια και νερό.
+          </p>
+        </div>
+        <div class="child">
+          <h6 class="about-h6">ΣΥΜΒΟΥΛΕΣ ΕΞΟΙΚ. ΝΕΡΟΥ</h6>
+          <img
+            src="images/save-water.jpg"
+            alt="plumbing van"
+            class="about-imgs"
+          />
+          <p class="hide">
+            Δεν ξεχνάμε να επιδιορθώσουμε τις βλάβες της εσωτερικής υδραυλικής εγκατάστασης. Κλείνουμε πάντα τον γενικό του νερού σε περίπτωση που λείπουμε καιρό απο το σπίτι.
+          </p>
+        </div>
+      </div>
+      <!-------------------------------------------------------CONTACT SECTION---------------------------------------------------->
+      <div class="section-container" id="contact"></div>
+      <div class="sections fade-in-on-scroll-left" >
+        <article class="sections-text">
+          <h1>ΕΠΙΚΟΙΝΩΝΙΑ</h1>
+          <h4>&bull; CONTACT &bull;</h4>
+          <hr>
+          <p class="text-center service--text">
+            Επικοινωνήστε μαζί μας για οποιαδήποτε εργασία η έργο σας ενδιαφέρει.
+          </p>
+        </article>
+      </div>
+      <div class="triangle-down"></div>
+
+      <!-----------form container----------->
+      <div class="form--container">
+        <div class="form-content">
+          <h1>ΖΗΤΗΣΤΕ ΠΡΟΣΦΟΡΑ</h1>
+          <form action="https://formsubmit.co/geoplumber.p@gmail.com" method="POST" class="contactForm">
+                <select class="form-select" aria-label="Default select example">
+              <option selected disabled >Επιλέξτε είδος εργασίας / έργου</option>
+              <option>Ύδρευση</option>
+              <option>Θέρμανση </option>
+              <option>Εγκατάσταση Ηλιακού</option>
+              <option>Ανακαίνιση Μπάνιου</option>
+              <option>Γενική Ανακαίνιση</option>
+              <option>Πυρόσβεση</option>
+              <option>Γενικές Βλάβες</option>
+            </select>
+            <input
+              class="form-style"
+              type="text"
+              name="name"
+              placeholder="Ονοματεπώνυμο"
+              required
+              id="name"
+              spellcheck="true"
+              
+            />
+            <input
+              class="form-style"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+              id="mail"
+              spellcheck="true"
+            />
+          <input type="tel" name="tel" id="telephone" placeholder="Τηλέφωνο" class="form-style">
+          <input
+          class="form-style"
+          type="text"
+          name="place"
+          placeholder="Οδός"
+          required
+          id="street"
+          spellcheck="true"
+          
+        />
+            <textarea
+              class="form-style"
+              name="message"
+              rows="10"
+              placeholder="Γράψτε μας η επιλέξτε απο την λίστα μία η περισσότερες  επιλογές του είδος εργασίας / έργου που επιθυμείτε."
+              required
+              id="txt-area"
+              spellcheck="true"
+            ></textarea>
+            <button type="submit" class="send-btn animated-border-button">Αποστολή Μυνήματος</button>
+          </form>
+        </div>
+        <div class="contact-container">
+            <div class="contact-div item">
+              <img src="images/phone-call_1.png" alt="phone-img " class="contact-imgs">
+              <div class="p-tags ">
+              <p>Kαλέστε στο</p>
+              <p><a href="tel:+306971873931" id="phoneText">6971873931</a></p>
+              <p>για οποιαδήποτε εργασία</p>
+              <p>σας ενδιαφέρει</p> 
+              </div>
+            </div>
+            <div class="contact-div ">
+              <img src="images/email_1.png" alt="mail-img" class="contact-imgs">
+              <div class="p-tags ">
+                <p>Εναλλακτικά</p> 
+                <p>μπορείτε να μας βρείτε</p> 
+                <p>στο <a href="mailto:geoplumber.p@gmail.com" id="mailText">geoplumber.p
+                  @gmail.com</a></p> 
+              </div>
+            </div>
+            <div class="contact-div  item">
+              <img src="images/work-schedule_1.png" alt="clock-img" class="contact-imgs">
+              <div class="p-tags">
+              <p>Ώραριο</p> 
+              <p>ΔΕΥΤΕΡΑ</p>
+                <p>εως</p>
+              <p>ΣΑΒΒΑΤΟ</p> 
+              <p>8:00 με 20:00</p> 
+              </div>
+          </div>
+        </div>
+      </div>
+      <a href="#top"><div class="arrow-up fade-in-from-bottom"></div></a>
+  </main>
+    <footer class="fade-in-from-bottom">
+      <div  class="footer-icons-container">
+        <div class="footer-div">
+          <p>Τηλέφωνο</p>
+          <a href="tel:+306971873931" id="phoneText">+306971873931</a>
+        </div>
+        <div class="footer-div">
+          <p>E-mail</p>
+          <a href="mailto:geoplumber.p@gmail.com" id="mailText">geoplumber.p@gmail.com</a>
+        </div>
+        <div class="footer-div">
+          <p>Website</p>
+          <a href="www.petousisplumbing.gr">www.petousisplumbing.gr</a>
+        </div>
+      </div>
+        <div class="copyright-text">
+          <p>©️Petousis Plumbing <span id="date"></span>. All rights reserved.</p>
+          <p>Development & Design by <span class="developer">A.Andrikopoulos</span></p>
+      </div>
+    </footer>
+  </body>
+</html>
