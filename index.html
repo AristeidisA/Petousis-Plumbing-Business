@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://samplesite.com/page.html">
+    <link rel="sitemap" type="application/xml" href="https://samplesite.com/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://samplesite.com/rss.xml">
+    <link rel="search" type="application/opensearchdescription+xml" title="Search" href="https://samplesite.com/search.xml">
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -11,13 +15,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
     <script defer="module" src="index.js"></script>
-    <title>ΘΕΡΜΟΫΔΡΑΥΛΙΚΟΣ-ΠΕΤΟΥΣΗΣ ΓΕΩΡΓΙΟΣ | petousisplumbing.gr</title>
+    <title>ΘΕΡΜΟΫΔΡΑΥΛΙΚΟΣ-ΠΑΤΡΑ | petousisplumbing.gr</title>
   </head>
   <body>
     <!-----------------------------SCROLL LOADER------------------------------------>
@@ -50,7 +55,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse ms fs-5 mb-2" id="navbarText" id="#top">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4em;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item" >
                 <a
                   style="color: rgb(210, 210, 221)"
@@ -109,8 +114,8 @@
 
     <!------LEFT NAVBAR AFTER 1400PX-->
    
-    <nav class="navbar navbar-dark fixed-top hidden">
-      <div class="container-fluid ">
+    <nav class="navbar navbar-dark fixed-top hidden bar-one">
+      <div class="container-fluid bar-two">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -123,22 +128,22 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow pe-3">
               <li class="nav-item ">
-                <a class="nav-link text-center active hover-underline-animation" aria-current="page" href="#">ΑΡXΙΚΗ</a>
+                <a class="nav-link text-center active hover-underline-animation left-nav" aria-current="page" href="#">ΑΡXΙΚΗ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center hover-underline-animation" href="#who">ΕΠΙΧΕΙΡΗΣΗ</a>
+                <a class="nav-link text-center hover-underline-animation left-nav" href="#who">ΕΠΙΧΕΙΡΗΣΗ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center hover-underline-animation" href="#work">ΕΡΓΑ</a>
+                <a class="nav-link text-center hover-underline-animation left-nav" href="#work">ΕΡΓΑ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center hover-underline-animation" href="#services">ΥΠΗΡΕΣΙΕΣ</a>
+                <a class="nav-link text-center hover-underline-animation left-nav" href="#services">ΥΠΗΡΕΣΙΕΣ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center hover-underline-animation" href="#about">ΠΕΡΙΣΣΟΤΕΡΑ</a>
+                <a class="nav-link text-center hover-underline-animation left-nav" href="#about">ΠΕΡΙΣΣΟΤΕΡΑ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center hover-underline-animation" href="#contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                <a class="nav-link text-center hover-underline-animation left-nav" href="#contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
               </li>
             </ul>
           </div>
@@ -148,7 +153,7 @@
     
   <!--------------------------------HEADER SECTION------------------------------>
 
-  <article class="header-container slide">
+  <article class="header-container slide-from-top">
     <header>
         <h1 class="typing-effect-h1">ΘΕΡΜΟΫΔΡΑΥΛΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</h1>
         <h3 class="typing-effect-h3">Πετούσης Γεώργιος</h3>
@@ -157,7 +162,7 @@
  </article>
  <a href="#top"><div class="arrow-down fade-in-from-bottom"></div></a>
 <!--------------------------------WHO WE ARE SECTION----------------------------------->
-<div class="who-container section-container" id="who" >
+<div class="who-container section-container fade-in-from-bottom" id="who" >
   <div class="who-headers">
     <h5>ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΕΜΑΣ</h5>
     <h6>&bull; Who We Are &bull;</h6>
@@ -166,7 +171,7 @@
   <div class="who-wrapper">
     <div class="who-item">
       <img src="images/quality-assurance.png" alt="an image of quality-assurance symbol" class="who-img">
-      <p>Η ομάδα μου αποτελείται απο έμπειρους και πιστοποιημένους υδραυλικούς με πολυετή εμπειρία. Παρέχουμε μεγάλη γκάμα υπηρεσιών σε ιδιώτες αλλά και επιχειρήσεις. Απο μία απλή υδραυλική βλάβη έως μια ολόκληρη Θερμοϋδραυλική εγκατάσταση, σας έχουμε καλυμμένους.</p>
+      <p>Η ομάδα μου αποτελείται απο έμπειρους και πιστοποιημένους υδραυλικούς με πολυετή εμπειρία. Παρέχουμε μεγάλη γκάμα υπηρεσιών σε ιδιώτες αλλά και επιχειρήσεις. Απο μία απλή υδραυλική βλάβη έως μια ολόκληρη Θερμοϋδραυλική εγκατάσταση, σας έχουμε καλλυμένους.</p>
     </div>
     <div class="who-item">
       <img src="images/maintenance.png" alt="icon with house and a mechanic wheel" class="who-img">
@@ -201,9 +206,7 @@
           </p>
         </article>
       </div>
-      <div class="triangle-down" ></div>
-
-      
+    
       <div class="works-container">
         <div class="container">
           <img src="images/carousel-icon-1.jpg" alt="Image 1" class="works-img" onclick="toggleImageEnlargement(this)">
@@ -211,7 +214,7 @@
           <img src="images/carousel-icon-3.jpg" alt="Image 3" class="works-img" onclick="toggleImageEnlargement(this)">
           <img src="images/carousel-icon-4.jpg" alt="Image 4" class="works-img" onclick="toggleImageEnlargement(this)">
           <img src="images/carousel-icon-5.jpg" alt="Image 3" class="works-img" onclick="toggleImageEnlargement(this)">
-          <img src="images/pyrosvesi.jpg" alt="Image 5"       class="works-img" onclick="toggleImageEnlargement(this)"> 
+          <img src="images/works.jpg" alt="Image 5"       class="works-img" onclick="toggleImageEnlargement(this)"> 
           <img src="images/carousel-icon-1.jpg" alt="Image 6" class="works-img" onclick="toggleImageEnlargement(this)">
       </div>
       </div>
@@ -228,84 +231,71 @@
           </p>
         </article>
       </div>
-      <div class="triangle-down "></div>
       <div class="services--container">
-        <div class="service card">
-          <h3>ΘΕΡΜΑΝΣΗ</h3>
-          <img
-            class="img--services"
-            src="images/thermansi.jpg"
-            alt="a radiator image"
-          />
-          <p>
-            Είδη θέρμανσης: θερμαντικά σώματα, λέβητες, καυστήρες, boiler,αντλίες
-            θερμότητας.
-          </p>
+        <div class="card">
+          <img src="/images/thermansi.jpg"/>
+          <h3>Θέρμανση</h3>
+          <div class="focus-content">
+            <p>Είδη θέρμανσης: θερμαντικά σώματα, λέβητες, καυστήρες, boiler,αντλίες
+              θερμότητας. Σύμφωνα με τις ανάγκες του σπιτίου σας η της επιχειρησής σας, σας προτείνουμε
+              τον κατάλληλο τύπο θέρμανσης.
+            </p>
+          </div>
         </div>
-        <div class="service card">
-          <h3>ΥΔΡΕΥΣΗ</h3>
-          <img
-            class="img--services"
-            src="images/vrisi.jpg"
-            alt="an image of a water battery"
-          />
-          <p>
-            Η εσωτερική υδραυλική εγκατάσταση ενός κτηρίου, περιλαμβάνει το
-            σύστημα διανομής του κρύου και ζεστού νερού και το σύστημα αποχέτευσης
-            των ακαθάρτων νερών και λυμάτων.
-          </p>
+        <div class="card">
+          <img src="images/idreysh.jpg"/>
+          <h3>Ύδρευση</h3>
+          <div class="focus-content">
+            <p>Η εσωτερική υδραυλική εγκατάσταση ενός κτηρίου, περιλαμβάνει το
+              σύστημα διανομής του κρύου και ζεστού νερού και το σύστημα αποχέτευσης
+              των ακαθάρτων νερών και λυμάτων.
+            </p>
+          </div>
         </div>
-        <div class="service card">
-          <h3>ΕΝΔΟΔΑΠΕΔΙΑ ΘΕΡΜΑΝΣΗ</h3>
-          <img
-            class="img--services"
-            src="images/endodapedia.jpg"
-            alt="floor heating"
-          />
-          <p>
-            Η ενδοδαπέδια θέρμανση είναι ένα σύστημα σωλήνων που εγκαθίσταται κάτω
-            από το δάπεδο. Μέσα από αυτό περνά ζεστό νερό. Το σύστημα παρουσιάζει
-            κοινά με τους συμβατικούς τρόπους θέρμανσης.
-          </p>
+        <div class="card">
+          <img src="images/endodapedia.jpg"/>
+          <h3>Ενδοδαπέδια Θέρμανση</h3>
+          <div class="focus-content">
+            <p>Η ενδοδαπέδια θέρμανση είναι ένα σύστημα σωλήνων που εγκαθίσταται κάτω
+              από το δάπεδο. Μέσα από αυτό περνά ζεστό νερό. Το σύστημα παρουσιάζει
+              κοινά με τους συμβατικούς τρόπους θέρμανσης.
+            </p>
+          </div>
         </div>
-        <div class="service card">
-          <h3>ΗΛ.ΘΕΡΜΟΣΙΦΩΝΑΣ</h3>
-          <img class="img--services" src="images/hliakos.jpg" alt="sun heater" />
-          <p>
-            Ο ηλιακός θερμοσίφωνας είναι η απλούστερη και η γνωστότερη ηλιακή
-            συσκευή. Κατά την λειτουργία του γίνεται εκμετάλλευση δυο φυσικών
-            φαινομένων. Με την αρχή του θερμοσιφώνου επιτυγχάνεται η κυκλοφορία
-            του νερού με φυσικό τρόπο χωρίς μηχανικά μέρη (αντλίες κλπ.)
-          </p>
+        <div class="card">
+          <img src="images/hliakos.jpg"/>
+          <h3>Εγκατάσταση Ηλιακού</h3>
+          <div class="focus-content">
+            <p> Ο ηλιακός θερμοσίφωνας είναι η γνωστότερη ηλιακή συσκευή.
+              Κατά την λειτουργία του γίνεται εκμετάλλευση δυο φυσικών
+              φαινομένων και επιτυγχάνεται η κυκλοφορία του νερού με φυσικό τρόπο χωρίς μηχανικά μέρη.
+            </p>
+          </div>
         </div>
-        <div class="service card">
-          <h3>ΣΥΣΤΗΜΑΤΑ ΠΥΡΟΣΒΕΣΗΣ</h3>
-          <img
-            class="img--services"
-            src="images/pyrosvesi.jpg"
-            alt="fire extinguiser"
-          />
-          <p>
-            Συστήματα πυρόσβεσης - (Πυρανιχνευτές, Κομβίο Ενεργοποίησης &
-            Ακυρωτικό, Φαροσειρήνα κτλ.), με στόχο την όσο το δυνατόν ταχύτερη
-            ανίχνευση και αντιμετώπιση εστίας φωτιάς.
-          </p>
+        <div class="card">
+          <img src="images/pirosvesh.jpg"/>
+          <h3>Συστηματα Πυρόσβεσης</h3>
+          <div class="focus-content">
+            <p>Συστήματα πυρόσβεσης - (Πυρανιχνευτές, Κομβίο Ενεργοποίησης &
+              Ακυρωτικό, Φαροσειρήνα κτλ.), με στόχο την όσο το δυνατόν ταχύτερη
+              ανίχνευση και αντιμετώπιση εστίας φωτιάς.
+            </p>
+          </div>
         </div>
-        <div class="service card">
-          <h3>ΕΝΙΣΧΥΣΗ ΠΙΕΣΗΣ ΝΕΡΟΥ</h3>
-          <img
-            class="img--services"
-            src="images/Water-pressure-booster-pumps.png"
-            alt="water pump"
-          />
-          <p>
-            Για την παροχή νερού οικιακής χρήσης έχει σχεδιαστεί μία αντλία
-            ενίσχυσης πίεσης νερού που αυξάνει την πίεση σε ένα σύστημα νερού ώστε
-            να προσφέρει επαρκή παροχή και πίεση νερού στους χρήστες.
-          </p>
+        <div class="card">
+          <img src="images/enisxtiths.jpg"/>
+          <h3>Ενίσχυση Πίεσης Νερού</h3>
+          <div class="focus-content">
+            <p>Για την παροχή νερού οικιακής χρήσης έχει σχεδιαστεί μία αντλία
+              ενίσχυσης πίεσης νερού που αυξάνει την πίεση σε ένα σύστημα νερού ώστε
+              να προσφέρει επαρκή παροχή και πίεση νερού στους χρήστες.
+            </p>
+          </div>
         </div>
       </div>
 
+  
+          
       <!-------------------------------------------ABOUT US SECTION-------------------------------------------------->
       
       <div class="section-container" id="about"></div>
@@ -315,71 +305,66 @@
           <h4>&bull; CUSTOM SOLUTIONS &bull;</h4>
           <hr>
           <p>
-            Με πάνω από 30 χρόνια επαγγελματικής εμπειρίας,<br />
-            το εξειδικευμένο μας συνεργείο καλυπτει οποιαδήποτε εργασία ή έργο σας
-            χρειάζεται υλοποίηση.
-          </p>
-          <hr>
-          <p>
             Ανάλαμβανουμε κάθε είδους εργασία ύδρευσης και θέρμανσης σε όλη την Ελλάδα,<br />
             προσαρμοσμένες στις ανάγκες σας, πάντα σε προσιτές τιμές.
           </p>
         </article>
       </div>
-      <div class="triangle-down"></div>
       <!-----------------------------------------ABOUT IMAGES CONTAINER-------------------------------->
      
       <div class="imgs-container">
+        <video src="images/services-background-clip.mp4" playsinline autoplay muted loop ></video>
         <div class="child">
-          <h6 class="about-h6">ΜΕΛΕΤΕΣ & ΑΝΑΚΑΙΝΙΣΕΙΣ</h6>
-          <img
-            src="images/house-repair.jpg"
-            alt="house with tools"
-            class="about-imgs"
-          
-          />
-          <p class="hide">Αναλαμβάνουμε μελέτες για θερμουδραυλικές εγκαταστάσεις,
-            καθώς και την υλοποίηση τους,
-            όπως επίσης και ανακαινίσεις του δικτύου σας.
-            </p>
-        </div>
-        <div class="child">
-          <h6 class="about-h6">ΓΡΗΓΟΡΗ ΕΞΥΠΗΡΕΤΗΣΗ </h6>
-          <img
-            src="images/plumber-truck.jpg"
-            alt="plumbing van"
-            class="about-imgs"
+            <h6 class="about-h6">ΜΕΛΕΤΕΣ & ΑΝΑΚΑΙΝΙΣΕΙΣ</h6>
+            <img
+              src="images/house-repair.jpg"
+              alt="house with tools"
+              class="about-imgs"
             
-          />
-          <p class="hide">Ο χρόνος σας είναι πολύτιμος,
-            για αυτό και εμείς σας εξυπηρετούμε το συντομότερο δυνατό
-            με συνέπεια και επαγγελματισμό.
+            />
+            <p class="hide">Αναλαμβάνουμε μελέτες για θερμοϋδραυλικές εγκαταστάσεις,
+              καθώς και την υλοποίηση τους,
+              όπως επίσης και ανακαινίσεις του δικτύου σας.
+              </p>
+          </div>
+          <div class="child">
+            <h6 class="about-h6">ΓΡΗΓΟΡΗ ΕΞΥΠΗΡΕΤΗΣΗ </h6>
+            <img
+              src="images/plumber-truck.jpg"
+              alt="plumbing van"
+              class="about-imgs"
+              
+            />
+            <p class="hide">Ο χρόνος σας είναι πολύτιμος,
+              για αυτό και εμείς σας εξυπηρετούμε το συντομότερο δυνατό
+              με συνέπεια και επαγγελματισμό.
+              </p>
+          </div>
+          <div class="child">
+            <h6 class="about-h6">SMART PLUMBING ΛΥΣΕΙΣ</h6>
+            <img
+              src="images/water-tap.jpg"
+              alt="plumbing van"
+              class="about-imgs"
+            />
+            <p class="hide">
+              Σας παρέχουμε έξυπνες λύσεις ύδρευσης και θέρμανσης
+              για να αναβαθμίσετε
+              τον τρόπο ζωής σας και vα εξοικονομήσετε ενέργεια και νερό.
             </p>
-        </div>
-        <div class="child">
-          <h6 class="about-h6">SMART ΥΔΡΑΥΛΙΚΕΣ ΛΥΣΕΙΣ</h6>
-          <img
-            src="images/water-tap.jpg"
-            alt="plumbing van"
-            class="about-imgs"
-          />
-          <p class="hide">
-            Σας παρέχουμε έξυπνες λύσεις ύδρευσης και θέρμανσης
-            για να αναβαθμίσετε
-            τον τρόπο ζωής σας και vα εξοικονομήσετε ενέργεια και νερό.
-          </p>
-        </div>
-        <div class="child">
-          <h6 class="about-h6">ΣΥΜΒΟΥΛΕΣ ΕΞΟΙΚ. ΝΕΡΟΥ</h6>
-          <img
-            src="images/save-water.jpg"
-            alt="plumbing van"
-            class="about-imgs"
-          />
-          <p class="hide">
-            Δεν ξεχνάμε να επιδιορθώσουμε τις βλάβες της εσωτερικής υδραυλικής εγκατάστασης. Κλείνουμε πάντα τον γενικό του νερού σε περίπτωση που λείπουμε καιρό απο το σπίτι.
-          </p>
-        </div>
+          </div>
+          <div class="child">
+            <h6 class="about-h6">ΣΥΜΒΟΥΛΕΣ ΕΞΟΙΚ. ΝΕΡΟΥ</h6>
+            <img
+              src="images/save-water.jpg"
+              alt="plumbing van"
+              class="about-imgs"
+            />
+            <p class="hide">
+              Δεν ξεχνάμε να επιδιορθώσουμε τις βλάβες της εσωτερικής υδραυλικής εγκατάστασης. Κλείνουμε πάντα τον γενικό του νερού σε περίπτωση που λείπουμε καιρό απο το σπίτι.
+            </p>
+          </div> 
+    
       </div>
       <!-------------------------------------------------------CONTACT SECTION---------------------------------------------------->
       <div class="section-container" id="contact"></div>
@@ -393,8 +378,6 @@
           </p>
         </article>
       </div>
-      <div class="triangle-down"></div>
-
       <!-----------form container----------->
       <div class="form--container">
         <div class="form-content">
@@ -486,6 +469,12 @@
       <a href="#top"><div class="arrow-up fade-in-from-bottom"></div></a>
   </main>
     <footer class="fade-in-from-bottom">
+      <nav class="social">
+        <ul>
+          <li><a href="https://www.instagram.com/plumbing_tech_gp/" target="_blank">Instagram<i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/giwrgos.petousis" target="_blank">Facebook<i class="fa fa-facebook"></i></a></li>
+        </ul>
+    </nav>
       <div  class="footer-icons-container">
         <div class="footer-div">
           <p>Τηλέφωνο</p>

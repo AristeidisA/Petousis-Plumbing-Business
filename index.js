@@ -44,7 +44,7 @@ setTimeout(function () {
   /*Start the typing effect after the animation is complete*/
   typeEffect(
     heading1,
-    100
+    115
   ); /*Adjust the typing speed as needed (in milliseconds)*/
 }, 100);
 
@@ -53,7 +53,7 @@ setTimeout(function () {
   heading3.style.opacity = 1;
   heading2.style.transition = "2.0s";
   heading3.style.transition = "2.0s";
-}, 3500);
+}, 4100);
 
 //SECTIONS APPEAR FROM LEFT
 const fadeInOnScrollLeft = () => {
