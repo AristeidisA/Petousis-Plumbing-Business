@@ -75,42 +75,24 @@ const fadeInOnScrollLeft = () => {
 };
 fadeInOnScrollLeft();
 
-//HOVER THE MOUSE OVER THE CARD
-const HoverOverTheAboutCards = () => {
-  const imgDivs = document.querySelectorAll(".child");
-  imgDivs.forEach((imgDiv) => {
-    imgDiv.addEventListener("mouseover", function () {
-      imgDiv.classList.add("shadow");
-      imgDiv.firstElementChild.style.color = "white";
-    });
-    /*EXIT THE MOUSE FROM THE CARD */
-    imgDivs.forEach((imgDiv) => {
-      imgDiv.addEventListener("mouseleave", function () {
-        imgDiv.classList.remove("shadow");
-        imgDiv.style.transition = "1s";
-        imgDiv.firstElementChild.style.color = "";
-      });
-    });
-    /*click flip and reveal context */
-    imgDivs.forEach((imgDiv) => {
-      imgDiv.addEventListener("click", function () {
-        imgDiv.classList.add("flip");
-        imgDiv.firstElementChild.style.transform = "rotateY(180deg)";
-        imgDiv.children[1].classList.add("hide");
-        imgDiv.lastElementChild.classList.remove("hide");
+//CUSTOM SOLUTIONS FUNCTION
+const customSolutions = () => {
+  const cards = document.querySelectorAll(".card-custom");
 
-        //remove flip and shadow
-        imgDiv.addEventListener("mouseleave", function () {
-          imgDiv.classList.remove("flip", "shadow");
-          imgDiv.firstElementChild.style.transform = "";
-          imgDiv.children[1].classList.remove("hide");
-          imgDiv.lastElementChild.classList.add("hide");
-        });
+  cards.forEach((card) => {
+    card.addEventListener("mouseover", function () {
+      card.classList.add("hover");
+      card.addEventListener("mouseleave", function () {
+        card.classList.remove("hover");
+        card.classList.remove("is-flipped");
       });
+    });
+    card.addEventListener("click", function () {
+      card.classList.toggle("is-flipped");
     });
   });
 };
-HoverOverTheAboutCards();
+customSolutions();
 
 // CONTACT FORM
 const TypeOfWorkSelection = () => {
