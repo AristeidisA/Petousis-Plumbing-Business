@@ -55,7 +55,7 @@ const TypeEffectFunc = () => {
     heading3.style.transition = "2.0s";
   }, 4100);
 };
-
+TypeEffectFunc();
 //SECTIONS APPEAR FROM LEFT
 const fadeInOnScrollLeft = () => {
   const elements = document.querySelectorAll(".fade-in-on-scroll-left");
