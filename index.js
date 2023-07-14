@@ -178,6 +178,8 @@ function displayUI() {
 
   TypeEffectFunc();
 
+  fadeInFromBottom();
+
   fadeInOnScrollLeft();
 
   customSolutions();
@@ -187,8 +189,6 @@ function displayUI() {
   EnlargeImages();
 
   ContactHoverEffects();
-
-  fadeInFromBottom();
 
   GettingYear();
 }
