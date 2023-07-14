@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Voltaire&display=swap");
+
 @font-face {
-  src: url(./brutel/Brutel-Black.otf);
+  src: url(brutel/Brutel-Black.otf);
   font-family: "Brutel";
 }
 body {
@@ -45,6 +47,12 @@ hr {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.fade-in-on-scroll-right {
+  position: relative;
+  opacity: 0;
+  transform: translateX(+40%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 .fade-in-from-bottom {
   opacity: 0;
   transform: translateY(+18%);
@@ -55,6 +63,7 @@ hr {
   opacity: 1;
   transform: translateX(0%);
 }
+
 .slide-from-top {
   animation: slideIn 1.2s ease-in;
   animation-fill-mode: forwards;
@@ -164,13 +173,23 @@ hr {
   margin-bottom: 30px;
 }
 
-/*navbar title*/
-.head--title {
+.offCanvasInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-family: "Brutel";
-  color: rgb(255, 254, 254);
+  color: whitesmoke;
+  font-size: larger;
 }
+.canvas-logo {
+  width: 25%;
+}
+/*navbar title*/
+
 .head--name {
   font-family: "Brutel";
+  display: flex;
 }
 /*INTRODUCTION HEADER CONTAINER*/
 .header-container {
@@ -255,16 +274,14 @@ header :first-child {
   font-family: "Brutel";
   margin-top: 2%;
   display: flex;
-  height: 30%;
+  justify-content: space-between;
   margin-bottom: 3%;
 }
 .who-img {
+  display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  aspect-ratio: 3/3;
 }
 .who-item {
   display: flex;
@@ -279,7 +296,7 @@ header :first-child {
     1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   border-radius: 0.5em;
-
+  height: auto;
   &:hover {
     transform: rotate3d(0, 0, 0, 0deg);
     background-color: #06537221;
@@ -293,7 +310,8 @@ header :first-child {
   font-weight: normal;
   text-overflow: ellipsis;
   text-align: center;
-  letter-spacing: 0;
+  justify-self: baseline;
+  white-space: wrap;
 }
 /*ALL INFORMATION SECTIONS*/
 .match-navbar {
@@ -331,7 +349,7 @@ header :first-child {
   color: rgb(18, 67, 87);
   padding: 3%;
   margin-bottom: 3%;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
   backdrop-filter: blur(10px);
   scroll-margin-top: 10%;
 }
@@ -502,14 +520,6 @@ header :first-child {
   backdrop-filter: blur(10px);
 }
 
-.card-back-text {
-  color: rgb(255, 255, 255);
-  text-align: start;
-  font-weight: bold;
-  font-family: "Brutel";
-  font-size: 1.5em;
-}
-
 .card-face--back {
   transform: rotateY(180deg);
   transition: 1s;
@@ -518,9 +528,29 @@ header :first-child {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.8), -3px 0px 7px rgba(0, 0, 0, 0.8),
     0px 4px 7px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Brutel";
+  font-size: 1.4em;
+}
+
+.card-face--back > a {
+  font-size: medium;
+  position: relative;
+  top: 45%;
+  right: 5%;
+}
+
+.card-face--back > a :active {
+  color: aqua;
+}
+
+.card-face--back > a :visited {
+  color: rgb(37, 10, 110);
 }
 
 video {
@@ -747,6 +777,7 @@ footer::before {
   position: fixed;
   top: 0%;
   width: 8.8%;
+  z-index: 2;
 }
 
 .social ul li a {
@@ -824,6 +855,7 @@ footer::before {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  align-content: center;
   position: relative;
   width: 100%;
   top: 15%;
@@ -894,7 +926,7 @@ footer::before {
   font-weight: 300;
   position: relative;
   margin: auto;
-  top: 16%;
+  top: 15%;
 }
 .copyright-text > p {
   padding: 0;
@@ -903,49 +935,61 @@ footer::before {
     0px 4px 7px rgba(0, 0, 0, 0.8);
 }
 .developer {
-  font-family: "Cinzel", serif;
+  font-family: "Voltaire", sans-serif;
+  font-weight: lighter;
   font-size: 20px;
 }
 
 /************************************************MEDIA QUERIES********************************************************/
-@media (max-width: 1920px) {
+@media (max-width: 1834px) {
   .nav-item {
-    margin-right: 1%;
+    margin-right: 2%;
   }
 
   .nav-link {
     font-size: large;
   }
-}
-
-@media (max-width: 1699px) {
-  .nav-item {
-    font-size: 18px;
-    font-family: "Cardo", serif;
-    font-weight: 200;
-  }
-}
-
-@media (max-width: 1653px) {
-  .nav-item {
-    font-size: 17px;
-    font-family: "Cardo", serif;
-    font-weight: 200;
-  }
-  header {
-    text-align: center;
-  }
   header > h1 {
-    font-size: 4.5em;
+    font-size: 3.5em;
     font-weight: 800;
   }
   header > h3 {
     padding: 1% 0%;
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-weight: 600;
   }
   header > h4 {
+    font-size: 2em;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 1720px) {
+  .nav-item {
+    font-size: medium;
+    margin-right: -2%;
+  }
+}
+
+@media (max-width: 1654px) {
+  .nav-item {
+    margin-right: -2%;
+  }
+
+  header {
+    text-align: center;
+  }
+  header > h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+  }
+  header > h3 {
+    padding: 1% 0%;
     font-size: 2.5em;
+    font-weight: 600;
+  }
+  header > h4 {
+    font-size: 2em;
     font-weight: 900;
   }
   .who-wrapper {
@@ -953,13 +997,44 @@ footer::before {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .who-container {
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+  }
   .who-item {
-    width: 20%;
+    display: flex;
+    width: 22%;
     align-self: center;
   }
+  .who-img {
+    width: 70%;
+    height: 20%;
+  }
+  .who-item > p {
+    font-size: large;
+  }
+  .imgs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  .child p {
-    font-size: 18px;
+  .scene {
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    height: 260px;
+  }
+
+  .card-front-text {
+    display: flex;
+    font-size: 1.8em;
+    justify-content: center;
+  }
+
+  .card-back-text {
+    font-size: 1.1em;
+    overflow: hidden;
   }
 
   .form-content {
@@ -967,24 +1042,16 @@ footer::before {
     text-align: center;
   }
   .form-content h1 {
-    font-family: "cardo", serif;
     font-size: 35px;
   }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1580px) {
   .sections {
-    text-align: center;
-    padding: 1.5%;
     font-size: x-large;
   }
-  .nav-link {
-    position: relative;
-    font-size: 14px;
-  }
-
   .nav-item {
-    margin-left: -1%;
+    margin-right: -6%;
   }
 
   .vr {
@@ -998,27 +1065,78 @@ footer::before {
     grid-gap: 2px; /* Adjust the gap as per your preference */
     justify-items: center;
   }
-  .child {
-    width: 55%;
+  .footer-info {
+    line-height: 1.5;
+  }
+  .footer-icons-container {
+    top: 10%;
   }
 
-  .child p {
-    font-size: 20px;
+  .copyright-text {
+    top: 15%;
   }
 }
 
-@media (max-width: 1466px) {
+@media (max-width: 1480px) {
+  .head--name {
+    font-size: larger;
+  }
   .nav-item {
-    font-size: 14px;
+    margin-right: -4%;
+    font-size: medium;
   }
+
   .who-headers > h5 {
-    font-size: xx-large;
+    font-size: 2em;
   }
 }
 
+@media (max-width: 1479px) {
+  .nav-item {
+    margin-right: -6%;
+    font-size: medium;
+    padding-right: 1%;
+  }
+  .footer-info {
+    line-height: 1.5;
+  }
+  .footer-icons-container {
+    top: 10%;
+  }
+
+  .copyright-text {
+    top: 15%;
+  }
+}
+
+@media (max-width: 1420px) {
+  .nav-item {
+    margin-right: -6%;
+    font-size: medium;
+    padding-right: 1%;
+  }
+  .footer-info {
+    line-height: 1.5;
+  }
+  .footer-icons-container {
+    top: 10%;
+  }
+
+  .copyright-text {
+    top: 15%;
+  }
+}
 @media (max-width: 1400px) {
+  header > h1 {
+    font-size: 2.8em;
+  }
+  header > h3 {
+    font-size: 2.4em;
+  }
+  header > h4 {
+    font-size: 1.9em;
+  }
   .sections {
-    text-align: center;
     padding: 1%;
     font-size: x-large;
   }
@@ -1034,19 +1152,32 @@ footer::before {
   .left-nav {
     font-size: x-large;
   }
+  .card {
+    width: 380px;
+  }
+
+  .card img {
+    width: 380px;
+    height: 200px;
+  }
+
+  .card p {
+    font-size: 15px;
+    padding-bottom: 5%;
+  }
+  .footer-info {
+    line-height: 1.5;
+  }
+  .footer-icons-container {
+    top: 10%;
+  }
+
+  .copyright-text {
+    top: 15%;
+  }
 }
 
 @media (max-width: 1281px) {
-  header > h1 {
-    font-size: 3.8em;
-  }
-  header > h3 {
-    font-size: 3em;
-  }
-  header > h4 {
-    font-size: 2em;
-  }
-
   .who-headers > h5 {
     font-size: 30px;
   }
@@ -1055,21 +1186,21 @@ footer::before {
     position: relative;
     bottom: 5px;
   }
-  .who-item {
-    width: 20%;
-  }
 
   .card {
-    width: 250px;
-    height: 230px;
+    width: 330px;
   }
+
   .card img {
-    width: 250px;
-    height: 130px;
+    width: 330px;
+    height: 200px;
+  }
+
+  .card p {
+    padding-bottom: 6%;
   }
 
   .form-content h1 {
-    font-family: "cardo", serif;
     font-size: 30px;
   }
   .contact-container {
@@ -1081,7 +1212,7 @@ footer::before {
   }
 
   .p-tags {
-    font-size: large;
+    line-height: 1.2;
   }
   .item {
     margin: 0;
@@ -1094,8 +1225,18 @@ footer::before {
     top: 8%;
   }
   .form-content h1 {
-    font-family: "cardo", serif;
     font-size: medium;
+  }
+
+  .footer-info {
+    line-height: 1.5;
+  }
+  .footer-icons-container {
+    top: 1%;
+  }
+
+  .copyright-text {
+    top: 0.5%;
   }
 }
 /* 
@@ -1105,12 +1246,19 @@ footer::before {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .sections {
-    text-align: center;
-    padding: 1%;
+    padding: 2%;
     font-size: larger;
+  }
+
+  .who-container {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
   }
   .who-item {
     width: 23%;
+  }
+  .who-item > p {
+    font-size: medium;
   }
   .container img.enlarged {
     width: 400px;
@@ -1124,48 +1272,50 @@ footer::before {
     grid-gap: 2px; /* Adjust the gap as per your preference */
     justify-items: center;
   }
-  .services--container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-content: center;
-    gap: 3%;
-  }
   .card {
-    width: 220px;
+    width: 310px;
+  }
+
+  .card img {
+    width: 310px;
     height: 200px;
   }
-  .card img {
-    width: 220px;
-    height: 180px;
-  }
-  .card h3 {
-    font-size: large;
-    line-height: 0.9;
-  }
+
   .card p {
-    margin-top: 10px;
-    font-size: 11px;
-    line-height: 1;
+    font-size: 14px;
+    padding-bottom: 7%;
   }
 
-  .card:hover img,
-  .card:focus-within img {
-    margin-top: -80px;
+  .form-content {
+    width: 60%;
+    margin-right: 10%;
   }
-
-  .about-h6 {
-    font-size: 20px;
+  .contact-imgs {
+    position: relative;
+    left: 7%;
   }
-  .child p {
-    font-size: 15px;
+  .contact-div {
+    width: 45%;
+    margin: 2%;
   }
-
+  .p-tags {
+    font-size: 1.2em;
+    width: 100%;
+  }
   .form-content h1 {
-    font-family: "cardo", serif;
-    font-size: 30x;
+    font-family: "Brutel";
+    font-size: xx-large;
   }
 
+  .footer-info {
+    line-height: 1.2;
+  }
+  .footer-icons-container {
+    top: 10%;
+  }
+  .copyright-text {
+    top: 9%;
+  }
   .left-nav {
     font-size: 20px;
   }
@@ -1178,8 +1328,6 @@ footer::before {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .sections {
-    text-align: center;
-    padding: 0.5%;
     font-size: large;
   }
   header > h1 {
@@ -1199,10 +1347,33 @@ footer::before {
     position: relative;
     bottom: 5px;
   }
+  .who-container {
+    border-top-left-radius: 38%;
+    border-top-right-radius: 38%;
+  }
   .who-item {
     width: 30%;
   }
+  .who-item > p {
+    font-size: 0.9em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    width: fit-content;
+  }
+
+  .container img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 5%;
+  }
   .container img.enlarged {
+    margin-top: 2.5%;
     width: 350px;
     height: 350px;
   }
@@ -1235,12 +1406,7 @@ footer::before {
   .card:focus-within img {
     margin-top: -80px;
   }
-  .child p {
-    font-size: 1em;
-  }
-  .about-h6 {
-    font-size: 18=4px;
-  }
+
   .contact-div {
     width: 40%;
   }
@@ -1248,8 +1414,12 @@ footer::before {
     top: 5%;
   }
 
+  .footer-icons-container {
+    top: 18%;
+  }
+
   .footer-div {
-    width: 20%;
+    width: 30%;
   }
 
   .footer-div > p {
@@ -1259,7 +1429,9 @@ footer::before {
   .footer-div > a {
     font-size: 10px;
   }
-
+  .copyright-text {
+    top: 20%;
+  }
   .left-nav {
     font-size: medium;
   }
@@ -1282,22 +1454,93 @@ footer::before {
     font-size: 1.5em;
   }
 
-  .child {
-    width: 60%;
-  }
-  .child p {
-    font-size: smaller;
+  .card {
+    width: 330px;
   }
 
-  .about-h6 {
-    font-size: 20px;
+  .card img {
+    width: 330px;
+    height: 140px;
   }
-  .form-content h1 {
-    font-family: "cardo", serif;
-    font-size: larger;
+
+  .card p {
+    font-size: 14px;
+    padding-bottom: 5%;
+  }
+
+  .imgs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scene {
+    width: 400px;
+    height: 200px;
+  }
+
+  .card-front-text {
+    display: flex;
+    font-size: 1.8em;
+    justify-content: center;
+  }
+
+  .card-back-text {
+    font-size: 1.1em;
+    overflow: hidden;
+  }
+  .contact-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .contact-div {
+    width: 100%;
+  }
+
+  .contact-imgs {
+    position: relative;
+    width: 30%;
+    top: 50px;
+  }
+  .hover-contact-effect {
+    transform: scale(1) translateY(1px);
+    transition: 2s;
+  }
+  .p-tags {
+    line-height: 1.1;
+  }
+  .form--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-content {
+    width: 60%;
+    margin-right: 3%;
+  }
+
+  .form-content:hover {
+    transform: none;
+  }
+
+  .form-content > h1 {
+    font-size: xx-large;
+    font-family: "Brutel";
+  }
+
+  .footer-info {
+    font-size: large;
+  }
+  .footer-info > img {
+    width: 70px;
   }
   .footer-div {
-    width: 20%;
+    width: 23%;
   }
 
   .footer-div > p {
@@ -1307,6 +1550,17 @@ footer::before {
   .footer-div > a {
     font-size: 10px;
   }
+
+  .footer-info {
+    line-height: 1;
+  }
+  .footer-icons-container {
+    top: 2%;
+  }
+
+  .copyright-text {
+    top: 1%;
+  }
 }
 
 /* 
@@ -1315,48 +1569,137 @@ footer::before {
 */
 @media (min-width: 768px) and (max-width: 873px) {
   .sections {
-    text-align: center;
-    padding: 0.5%;
     font-size: large;
   }
 
-  .who-headers > h5 {
-    font-size: 40px;
-  }
-  .who-headers > h5 {
-    font-size: 25px;
-  }
-  .child p {
-    font-size: 12px;
+  .who-headers {
+    font-size: 1.5em;
   }
 
-  .about-h6 {
-    font-size: 15px;
+  .card {
+    width: 330px;
   }
 
+  .card img {
+    width: 330px;
+    height: 140px;
+  }
+
+  .card p {
+    font-size: 14px;
+    padding-bottom: 5%;
+  }
+
+  .imgs-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .scene {
+    width: 400px;
+    height: 200px;
+  }
+
+  .card-front-text {
+    display: flex;
+    font-size: 1.8em;
+    justify-content: center;
+  }
+
+  .card-back-text {
+    font-size: 1.1em;
+    overflow: hidden;
+  }
   .contact-container {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
   }
 
+  .contact-div {
+    width: 100%;
+  }
+
+  .contact-imgs {
+    position: relative;
+    width: 30%;
+    top: 50px;
+  }
+  .hover-contact-effect {
+    transform: scale(1) translateY(1px);
+    transition: 2s;
+  }
   .p-tags {
-    font-size: smaller;
+    line-height: 1.1;
+  }
+  .form--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .form-content {
-    width: 50%;
+    width: 80%;
     margin-right: 3%;
   }
+
   .form-content:hover {
     transform: none;
   }
+
   .form-content h1 {
-    font-family: "cardo", serif;
-    font-size: x-large;
+    font-size: xx-large;
+    font-family: "Brutel";
+  }
+  footer {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    width: 99.1vw;
+    height: 69vh;
+  }
+  footer::before {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+  }
+
+  .social {
+    width: 10%;
+  }
+  .qr {
+    width: 25%;
+  }
+  .footer-info {
+    top: 10%;
+    font-size: xx-large;
+    line-height: 2;
+  }
+
+  .footer-icons-container {
+    top: 30%;
+  }
+
+  .footer-div {
+    width: 32%;
+  }
+  .footer-div p {
+    font-size: large;
+  }
+
+  .footer-div > a {
+    font-size: large;
+  }
+
+  .copyright-text {
+    top: 31%;
+    font-size: large;
   }
 }
 @media (min-width: 555px) and (max-width: 767px) {
   .sections {
     text-align: center;
-    padding: 0.5%;
+    padding: 10%;
     font-size: large;
   }
   header > h1 {
@@ -1371,115 +1714,181 @@ footer::before {
   }
 
   .who-headers > h5 {
-    font-size: 25px;
+    font-size: 1.2em;
   }
-  .who-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+  .who-headers > h6 {
+    font-size: 1.1em;
+  }
+  .who-container {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
   }
   .who-item {
-    width: 38%;
+    width: 35%;
   }
   .who-item > p {
-    font-size: medium;
+    font-size: smaller;
   }
+
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    position: relative;
+    right: 12%;
+    width: fit-content;
   }
 
   .container img {
-    width: 150px;
-    height: 150px;
-  }
-  .container img.enlarged {
-    display: none;
+    width: 140px;
+    height: 140px;
   }
 
   .container img:hover {
-    transform: scale(1.2);
+    transform: scale(1.6);
   }
 
   .services--container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 20px;
   }
   .card {
-    width: 200px;
+    width: 400px;
     height: 200px;
   }
   .card img {
-    width: 220px;
-    height: 180px;
+    width: 400px;
+    height: 150px;
   }
   .card h3 {
-    font-size: larger;
+    font-size: large;
     line-height: 0.9;
   }
   .card p {
     margin-top: 10px;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1;
   }
 
   .card:hover img,
   .card:focus-within img {
-    margin-top: -80px;
+    margin-top: -50px;
   }
 
-  .about-h6 {
-    font-size: 10px;
+  .imgs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .child {
-    width: 80%;
-  }
-  .child p {
-    font-size: 11px;
+  .scene {
+    width: 300px;
+    height: 200px;
   }
 
-  .p-tags {
-    font-size: 15px;
+  .card-front-text {
+    display: flex;
+    font-size: 1.8em;
+    justify-content: center;
   }
 
+  .card-back-text {
+    font-size: 1.1em;
+    overflow: hidden;
+  }
   .hover-contact-effect {
     transform: scale(1);
     transition: 1.5s;
   }
+
   .form--container {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
+
+  .contact-container {
+    width: 100%;
+  }
   .contact-div {
+    width: 76%;
+  }
+
+  .contact-imgs {
+    width: 30%;
+  }
+  .p-tags {
     width: 90%;
+    display: flex;
+    margin: auto;
+    line-height: 1.2;
+  }
+  .hover-contact-effect {
+    transform: scale(1) translateX(20px);
+    transition: 2s;
+  }
+  .contact-imgs-hover-effect {
+    transform: rotate(360deg);
+    transition: 1.5s;
+    width: 30%;
+    margin-bottom: 1%;
   }
   .form-content {
-    width: 100%;
+    width: 70%;
     margin-top: 15%;
   }
   .form-content:hover {
     transform: none;
   }
   .form-content h1 {
-    font-family: "cardo", serif;
-    font-size: x-large;
+    font-family: "Brutel";
+    font-size: xx-large;
   }
 
-  .contactForm {
-    height: 650px;
+  footer {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    width: 99.1vw;
+    height: 69vh;
+  }
+  footer::before {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+  }
+
+  .social {
+    width: 10%;
+  }
+  .qr {
+    width: 25%;
+  }
+  .footer-info {
+    font-size: large;
+    line-height: 1;
+  }
+
+  .footer-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    top: 5%;
   }
   .footer-div {
-    width: 20%;
+    width: 42%;
   }
-
-  .footer-div > p {
-    font-size: 20px;
+  .footer-div p {
+    font-size: medium;
   }
 
   .footer-div > a {
-    font-size: 9px;
+    font-size: small;
+  }
+
+  .copyright-text {
+    top: 5%;
+    font-size: small;
   }
 
   .left-nav {
@@ -1493,6 +1902,11 @@ footer::before {
 */
 
 @media (min-width: 320px) and (max-width: 554px) {
+  .header-container {
+    padding: 15%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
   .bar-one {
     width: 100%;
   }
@@ -1515,111 +1929,137 @@ footer::before {
   header > h4 {
     font-size: 1.3em;
   }
-
-  .who-item {
-    width: 40%;
+  .who-container {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
   }
 
+  .who-wrapper {
+    width: 90%;
+    margin: auto;
+  }
+  .who-item {
+    width: 48%;
+  }
+  .who-item > p {
+    font-size: smaller;
+  }
   .who-headers h5 {
-    font-size: large;
+    font-size: x-large;
   }
   .who-headers h6 {
     font-size: medium;
   }
 
-  .who-item > p {
-    font-size: medium;
-  }
-
   .sections {
-    font-size: medium;
-    padding: 0;
+    text-align: center;
+    padding: 10%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    margin-top: 14%;
   }
 
   .match-navbar {
     font-size: x-large;
   }
 
+  .sections-text {
+    font-size: large;
+  }
+  .sections-text > h1 {
+    font-size: x-large;
+  }
   .sections-text > h4 {
     font-size: medium;
   }
 
-  .triangle-down {
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 40px solid #065372;
-    position: relative;
-    top: -2px;
+  .container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
   .container img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 
   .container img:hover {
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
   .services--container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 20px;
   }
   .service:hover {
     transform: scale(1.1);
   }
   .card {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 270px;
   }
 
   .card h3 {
+    text-align: left;
     font-size: medium;
     line-height: 0.9;
     padding: 10%;
   }
 
   .card img {
-    width: fit-content;
-    height: 120px;
-    object-fit: cover;
+    width: 100%;
   }
   .card:hover img,
   .card:focus-within img {
-    margin-top: -100px;
+    margin-top: -50px;
   }
   .card p {
     margin-top: 10px;
-    font-size: 9px;
-    line-height: 1;
+    font-size: 12px;
+    line-height: 1.2;
   }
 
-  .child {
-    width: 85%;
+  .imgs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .about-h6 {
+
+  .scene {
+    width: 250px;
+    height: 180px;
+  }
+
+  .card-front-text {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+  }
+
+  .card-back-text {
     font-size: 1em;
+    overflow: hidden;
   }
-  .child > p {
-    font-size: 0.55em;
-    font-weight: 800;
-  }
-
   .form--container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .contact-container {
-    width: fit-content;
+    width: 100%;
   }
   .contact-div {
     padding-bottom: 10%;
-    width: 70%;
+    width: 100%;
   }
 
+  .contact-imgs {
+    width: 30%;
+  }
   .p-tags {
-    font-size: medium;
+    font-size: large;
   }
 
   .form-content {
@@ -1644,21 +2084,60 @@ footer::before {
     width: 9vmin;
     height: 9vmin;
   }
+
+  footer {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    width: 99.1vw;
+    height: 69vh;
+  }
+  footer::before {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+  }
+
+  .social {
+    width: 10px;
+  }
+
+  .social ul li:hover {
+    transform: translate(110px, 0);
+    background: rgba(19, 18, 18, 0.4);
+  }
+
+  .qr {
+    width: 25%;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+  .footer-info {
+    font-size: large;
+    line-height: 1.2;
+    text-align: center;
+  }
+
   .footer-icons-container {
     display: flex;
     flex-wrap: wrap;
+    top: 2%;
   }
-
+  .footer-div {
+    width: 32%;
+  }
   .footer-div p {
-    font-size: large;
-  }
-
-  .footer-div > a {
     font-size: medium;
   }
 
+  .footer-div > a {
+    font-size: xx-small;
+    width: fit-content;
+    letter-spacing: 0;
+  }
+
   .copyright-text {
+    top: -1%;
     font-size: small;
-    text-transform: lowercase;
   }
 }

@@ -14,8 +14,6 @@ const NavigationScrollBar = () => {
   });
 };
 
-NavigationScrollBar();
-
 //TYPING EFFECT FOR THE H-TAGS
 const typeEffect = (element, speed) => {
   const text = element.innerHTML;
@@ -32,28 +30,30 @@ const typeEffect = (element, speed) => {
   }, speed);
 };
 
-const heading1 = document.querySelector(".typing-effect-h1");
-const heading2 = document.querySelector(".typing-effect-h3");
-const heading3 = document.querySelector(".typing-effect-h4");
+const TypeEffectFunc = () => {
+  const heading1 = document.querySelector(".typing-effect-h1");
+  const heading2 = document.querySelector(".typing-effect-h3");
+  const heading3 = document.querySelector(".typing-effect-h4");
 
-setTimeout(function () {
-  heading1.style.animation = "none"; // Disable the typing effect animation
-  heading1.style.opacity = 1; // Ensure the heading is fully visible
-  heading2.style.opacity = 0;
-  heading3.style.opacity = 0;
-  /*Start the typing effect after the animation is complete*/
-  typeEffect(
-    heading1,
-    115
-  ); /*Adjust the typing speed as needed (in milliseconds)*/
-}, 100);
+  setTimeout(function () {
+    heading1.style.animation = "none"; // Disable the typing effect animation
+    heading1.style.opacity = 1; // Ensure the heading is fully visible
+    heading2.style.opacity = 0;
+    heading3.style.opacity = 0;
+    /*Start the typing effect after the animation is complete*/
+    typeEffect(
+      heading1,
+      115
+    ); /*Adjust the typing speed as needed (in milliseconds)*/
+  }, 100);
 
-setTimeout(function () {
-  heading2.style.opacity = 1;
-  heading3.style.opacity = 1;
-  heading2.style.transition = "2.0s";
-  heading3.style.transition = "2.0s";
-}, 4100);
+  setTimeout(function () {
+    heading2.style.opacity = 1;
+    heading3.style.opacity = 1;
+    heading2.style.transition = "2.0s";
+    heading3.style.transition = "2.0s";
+  }, 4100);
+};
 
 //SECTIONS APPEAR FROM LEFT
 const fadeInOnScrollLeft = () => {
@@ -73,7 +73,6 @@ const fadeInOnScrollLeft = () => {
   window.addEventListener("scroll", fadeIn);
   fadeIn();
 };
-fadeInOnScrollLeft();
 
 //CUSTOM SOLUTIONS FUNCTION
 const customSolutions = () => {
@@ -92,7 +91,6 @@ const customSolutions = () => {
     });
   });
 };
-customSolutions();
 
 // CONTACT FORM
 const TypeOfWorkSelection = () => {
@@ -105,7 +103,6 @@ const TypeOfWorkSelection = () => {
       : "";
   });
 };
-TypeOfWorkSelection();
 
 //CONTACT HOVER EFFECTS
 const ContactHoverEffects = () => {
@@ -125,7 +122,6 @@ const ContactHoverEffects = () => {
     })
   );
 };
-ContactHoverEffects();
 
 //FOOTER FADE IN FROM BOTTOM
 const fadeInFromBottom = () => {
@@ -145,7 +141,6 @@ const fadeInFromBottom = () => {
   window.addEventListener("scroll", fadeIn);
   fadeIn();
 };
-fadeInFromBottom();
 
 //GETTING YEAR
 const GettingYear = () => {
@@ -153,7 +148,6 @@ const GettingYear = () => {
   const date = new Date().getFullYear();
   dateText.textContent = date;
 };
-GettingYear();
 
 let currentlyEnlarged = null;
 const toggleImageEnlargement = (image) => {
@@ -178,3 +172,24 @@ const toggleImageEnlargement = (image) => {
     }
   }
 };
+
+function displayUI() {
+  NavigationScrollBar();
+
+  TypeEffectFunc();
+
+  fadeInOnScrollLeft();
+
+  customSolutions();
+
+  TypeOfWorkSelection();
+
+  EnlargeImages();
+
+  ContactHoverEffects();
+
+  fadeInFromBottom();
+
+  GettingYear();
+}
+displayUI();
