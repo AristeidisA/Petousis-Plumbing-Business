@@ -13,6 +13,7 @@ const NavigationScrollBar = () => {
     scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
   });
 };
+NavigationScrollBar();
 
 //TYPING EFFECT FOR THE H-TAGS
 const typeEffect = (element, speed) => {
@@ -73,6 +74,7 @@ const fadeInOnScrollLeft = () => {
   window.addEventListener("scroll", fadeIn);
   fadeIn();
 };
+fadeInOnScrollLeft();
 
 //CUSTOM SOLUTIONS FUNCTION
 const customSolutions = () => {
@@ -91,6 +93,7 @@ const customSolutions = () => {
     });
   });
 };
+customSolutions();
 
 // CONTACT FORM
 const TypeOfWorkSelection = () => {
@@ -103,6 +106,7 @@ const TypeOfWorkSelection = () => {
       : "";
   });
 };
+TypeOfWorkSelection();
 
 //CONTACT HOVER EFFECTS
 const ContactHoverEffects = () => {
@@ -122,6 +126,7 @@ const ContactHoverEffects = () => {
     })
   );
 };
+ContactHoverEffects();
 
 //FOOTER FADE IN FROM BOTTOM
 const fadeInFromBottom = () => {
@@ -141,6 +146,7 @@ const fadeInFromBottom = () => {
   window.addEventListener("scroll", fadeIn);
   fadeIn();
 };
+fadeInFromBottom();
 
 //GETTING YEAR
 const GettingYear = () => {
@@ -148,7 +154,9 @@ const GettingYear = () => {
   const date = new Date().getFullYear();
   dateText.textContent = date;
 };
+GettingYear();
 
+//Enlarge image to show
 let currentlyEnlarged = null;
 const toggleImageEnlargement = (image) => {
   if (currentlyEnlarged === image) {
@@ -172,24 +180,3 @@ const toggleImageEnlargement = (image) => {
     }
   }
 };
-
-function displayUI() {
-  NavigationScrollBar();
-
-  TypeEffectFunc();
-
-  fadeInFromBottom();
-
-  fadeInOnScrollLeft();
-
-  customSolutions();
-
-  TypeOfWorkSelection();
-
-  EnlargeImages();
-
-  ContactHoverEffects();
-
-  GettingYear();
-}
-displayUI();

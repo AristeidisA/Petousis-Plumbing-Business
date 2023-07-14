@@ -858,7 +858,7 @@ footer::before {
   align-content: center;
   position: relative;
   width: 100%;
-  top: 15%;
+  top: 6%;
   padding-top: 1.5%;
 }
 .footer-div {
@@ -926,7 +926,7 @@ footer::before {
   font-weight: 300;
   position: relative;
   margin: auto;
-  top: 15%;
+  top: 10%;
 }
 .copyright-text > p {
   padding: 0;
