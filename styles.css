@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Voltaire&display=swap");
-
 @font-face {
   src: url(brutel/Brutel-Black.otf);
   font-family: "Brutel";
@@ -180,7 +178,7 @@ hr {
   text-align: center;
   font-family: "Brutel";
   color: whitesmoke;
-  font-size: larger;
+  font-size: large;
 }
 .canvas-logo {
   width: 25%;
@@ -754,8 +752,8 @@ footer {
   box-shadow: 0px -30px 20px -10px rgba(0, 0, 0, 0.45);
   border-top-left-radius: 40%;
   border-top-right-radius: 40%;
-  width: 99.1vw;
-  height: 69vh;
+  width: 100%;
+  height: fit-content;
 }
 footer::before {
   border-top-left-radius: 40%;
@@ -933,11 +931,6 @@ footer::before {
   margin: 0;
   text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.8), -3px 0px 7px rgba(0, 0, 0, 0.8),
     0px 4px 7px rgba(0, 0, 0, 0.8);
-}
-.developer {
-  font-family: "Voltaire", sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
 }
 
 /************************************************MEDIA QUERIES********************************************************/
@@ -1485,10 +1478,6 @@ footer::before {
     justify-content: center;
   }
 
-  .card-back-text {
-    font-size: 1.1em;
-    overflow: hidden;
-  }
   .contact-container {
     width: 60%;
     display: flex;
@@ -1606,10 +1595,6 @@ footer::before {
     justify-content: center;
   }
 
-  .card-back-text {
-    font-size: 1.1em;
-    overflow: hidden;
-  }
   .contact-container {
     width: 60%;
     display: flex;
@@ -1662,38 +1647,6 @@ footer::before {
   footer::before {
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
-  }
-
-  .social {
-    width: 10%;
-  }
-  .qr {
-    width: 25%;
-  }
-  .footer-info {
-    top: 10%;
-    font-size: xx-large;
-    line-height: 2;
-  }
-
-  .footer-icons-container {
-    top: 30%;
-  }
-
-  .footer-div {
-    width: 32%;
-  }
-  .footer-div p {
-    font-size: large;
-  }
-
-  .footer-div > a {
-    font-size: large;
-  }
-
-  .copyright-text {
-    top: 31%;
-    font-size: large;
   }
 }
 @media (min-width: 555px) and (max-width: 767px) {
@@ -1795,10 +1748,6 @@ footer::before {
     justify-content: center;
   }
 
-  .card-back-text {
-    font-size: 1.1em;
-    overflow: hidden;
-  }
   .hover-contact-effect {
     transform: scale(1);
     transition: 1.5s;
@@ -1857,38 +1806,6 @@ footer::before {
   footer::before {
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
-  }
-
-  .social {
-    width: 10%;
-  }
-  .qr {
-    width: 25%;
-  }
-  .footer-info {
-    font-size: large;
-    line-height: 1;
-  }
-
-  .footer-icons-container {
-    display: flex;
-    flex-wrap: wrap;
-    top: 5%;
-  }
-  .footer-div {
-    width: 42%;
-  }
-  .footer-div p {
-    font-size: medium;
-  }
-
-  .footer-div > a {
-    font-size: small;
-  }
-
-  .copyright-text {
-    top: 5%;
-    font-size: small;
   }
 
   .left-nav {
@@ -2038,10 +1955,6 @@ footer::before {
     justify-content: center;
   }
 
-  .card-back-text {
-    font-size: 1em;
-    overflow: hidden;
-  }
   .form--container {
     display: flex;
     flex-direction: column;
@@ -2088,56 +2001,50 @@ footer::before {
   footer {
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
-    width: 99.1vw;
-    height: 69vh;
   }
   footer::before {
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
   }
 
-  .social {
-    width: 10px;
-  }
+  @media (min-width: 280px) and (max-width: 900px) {
+    .card-face--back {
+      font-size: 1em;
+      overflow: hidden;
+    }
+    .social {
+      width: 10%;
+    }
+    .qr {
+      width: 25%;
+    }
+    .footer-info {
+      top: 5%;
+      font-size: large;
+      line-height: 1;
+    }
 
-  .social ul li:hover {
-    transform: translate(110px, 0);
-    background: rgba(19, 18, 18, 0.4);
-  }
+    .footer-icons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 5%;
+    }
 
-  .qr {
-    width: 25%;
-  }
+    .footer-div {
+      width: 45%;
+    }
+    .footer-div p {
+      font-size: medium;
+    }
 
-  .footer-logo {
-    width: 50px;
-  }
-  .footer-info {
-    font-size: large;
-    line-height: 1.2;
-    text-align: center;
-  }
+    .footer-div > a {
+      font-size: x-small;
+    }
 
-  .footer-icons-container {
-    display: flex;
-    flex-wrap: wrap;
-    top: 2%;
-  }
-  .footer-div {
-    width: 32%;
-  }
-  .footer-div p {
-    font-size: medium;
-  }
-
-  .footer-div > a {
-    font-size: xx-small;
-    width: fit-content;
-    letter-spacing: 0;
-  }
-
-  .copyright-text {
-    top: -1%;
-    font-size: small;
+    .copyright-text {
+      top: 2%;
+      font-size: small;
+    }
   }
 }
